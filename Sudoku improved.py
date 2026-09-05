@@ -7,13 +7,13 @@ def uzunluq(setir):
         say+=1
     return say
 from random import randint
-level=int(input("Level (6 və ya 9): "))
-zorluq=int(input('Zorluq (boşluq sayı): '))
+level=int(input("Level (6 or 9): "))
+zorluq=int(input('Difficulty (number of empty spaces): '))
 reqsay=0
 say0 = 0
 l=[i for i in range(1,level+1)]
 if level==6:
-    print("     Sudoku")
+    print("    Sudoku")
 else:
     print("        Sudoku")
 #Sudokunun özü
@@ -96,17 +96,17 @@ else:
     print(f"\033[34m   0 1 2 3 4 5\033[0m")
 #Həll alqoritmi
 while saybos!=0:
-    x,y=map(int,input("Koordinatları daxil et: ").split())
+    x,y=map(int,input("Enter coordinates: ").split())
     koor=[i for i in range(level-1,-1,-1)]
     y=koor[y]
-    texmin=int(input("Reqem: "))
+    texmin=int(input("Number: "))
     cavab=sutunlar[x][y]
     if texmin==cavab:
         saybos-=1
         sualsetir[y][x]=cavab
-        print('\033[92mDogru!\033[0m')
+        print('\033[92mCorrect!\033[0m')
     else:
-        print('\033[92mYanlis!\033[0m')
+        print('\033[91mWrong!\033[0m')
         continue
     bos = level-1
     for setir3 in range(level):
@@ -116,4 +116,4 @@ while saybos!=0:
         print(f"\033[34m   0 1 2 3 4 5 6 7 8\033[0m")
     else:
         print(f"\033[34m   0 1 2 3 4 5\033[0m")
-print('\033[93mHell olundu!\033[0m')
+print('\033[93mSolved!\033[0m')
