@@ -1,18 +1,28 @@
-Sudoku Game
+```markdown
+# Terminal Sudoku
 
-A Sudoku game developed in Python.
+A simple command-line Sudoku game built in Python.
 
-Features
+## Features
+- **Board Sizes:** Choose between 6x6 or 9x9 grids.
+- **Custom Difficulty:** Set how many empty spaces you want.
+- **Colored Output:** Easy-to-read colored terminal feedback.
+- **No Installation:** Runs directly using standard Python.
 
-* Generates a new Sudoku puzzle
-* Creates empty cells for the player to solve
-* Allows the player to enter numbers
-* Checks whether the puzzle is solved correctly
+## How to Run
 
-Requirements
+Sudoku.py
 
-* Python 3.x
+```
 
-How to Run
+## How to Play
 
-python sudoku.py
+1. **Select Level:** Enter `6` or `9`.
+2. **Set Difficulty:** Enter the number of missing spots per row.
+3. **Enter Coordinates:** Enter `X Y` (Column and Row, e.g., `2 4`).
+4. **Enter Number:** Type your guess.
+5. Fill all empty spots correctly to win!
+
+```
+
+```
